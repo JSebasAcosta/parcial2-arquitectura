@@ -1,5 +1,6 @@
 package co.edu.unisabana.parcial.repository.sql.entity;
 
+import co.edu.unisabana.parcial.service.ICheckpointRepository;
 import co.edu.unisabana.parcial.service.model.Checkin;
 import co.edu.unisabana.parcial.service.model.Checkout;
 import java.time.LocalDateTime;
@@ -17,7 +18,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Checkpoint {
+public class Checkpoint implements ICheckpointRepository {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
